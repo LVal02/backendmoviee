@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-const connectionString = process.env.CONNECTION_STRING;
 
 
 router.get('/movies', (req, res) => {
@@ -12,11 +11,6 @@ router.get('/movies', (req, res) => {
       res.json({movies : movieData.results})
     })
 })    
-// router.get('/config', (req, res) => {
-//     const config = {
-//       api_key: process.env.CONNECTION_STRING
-//     };
-//     res.json(config);
-//   });
+
 module.exports = router;
 
